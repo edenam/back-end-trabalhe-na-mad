@@ -16,7 +16,9 @@
 		"twbs/bootstrap": "dev-master",
 		"components/jquery": "^3.1",
 		"components/jqueryui": "^1.12",
-		"select2/select2": "^4.0"
+		"select2/select2": "^4.0",
+		"igorescobar/jquery-mask-plugin": "^1.14",
+		"hsalazr/jquery-validation": "dev-master"
 	},
 	"suggest": {
 		"paragonie/random_compat": "Provides better randomness in PHP 5.x"
@@ -27,13 +29,17 @@
 	},
 	"scripts": {
 		"post-update-cmd": [
-			"rm -rf assets",
+			"rm -rf assets/bootstrap",
 			"mkdir -p assets/bootstrap",
+			"rm -rf assets/select2",
 			"mkdir -p assets/select2",
+			"rm -rf assets/jquery-mask-plugin",
+			"mkdir -p assets/jquery-mask-plugin",
 			"cp -R vendor/twbs/bootstrap/dist/* assets/bootstrap/",
 			"cp -R vendor/components/jquery assets/",
 			"cp -R vendor/components/jqueryui assets/",
-			"cp -R vendor/select2/select2/dist/* assets/select2/"
+			"cp -R vendor/select2/select2/dist/* assets/select2/",
+			"cp -R vendor/igorescobar/jquery-mask-plugin/dist/* assets/jquery-mask-plugin/"
 		]
 	}
 }

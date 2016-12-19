@@ -12,6 +12,8 @@
     <script type="text/javascript" src="/assets/jqueryui/jquery-ui.min.js"></script>
     <script type="text/javascript" src="/assets/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/assets/select2/js/select2.min.js"></script>
+    <script type="text/javascript" src="/assets/jquery-mask-plugin/jquery.mask.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
 
 </head>
 <body>

@@ -909,5 +909,106 @@
         ],
         "description": "Select2 is a jQuery based replacement for select boxes.",
         "homepage": "https://select2.github.io/"
+    },
+    {
+        "name": "igorescobar/jquery-mask-plugin",
+        "version": "v1.14.1",
+        "version_normalized": "1.14.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/kamihouse/jQuery-Mask-Plugin.git",
+            "reference": "678a7df1f0bb275ce53f365b91af99d86850978d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/kamihouse/jQuery-Mask-Plugin/zipball/678a7df1f0bb275ce53f365b91af99d86850978d",
+            "reference": "678a7df1f0bb275ce53f365b91af99d86850978d",
+            "shasum": ""
+        },
+        "time": "2016-04-27 16:16:55",
+        "type": "library",
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Igor Escobar",
+                "email": "blog@igorescobar.com",
+                "homepage": "https://about.me/igorescobar",
+                "role": "Developer"
+            },
+            {
+                "name": "Thiago Pereira Rosa",
+                "email": "thiagor@engineer.com",
+                "homepage": "http://coderi.com.br",
+                "role": "Contributor"
+            }
+        ],
+        "description": "A jQuery Plugin to make masks on form fields and html elements.",
+        "homepage": "https://github.com/igorescobar/jQuery-Mask-Plugin",
+        "keywords": [
+            "jquery",
+            "mask",
+            "plugin"
+        ]
+    },
+    {
+        "name": "hsalazr/jquery-validation",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/hsalazr/jquery-validation.git",
+            "reference": "3aa2abd538f9723de27b9b6d602ed0a2116d0389"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/hsalazr/jquery-validation/zipball/3aa2abd538f9723de27b9b6d602ed0a2116d0389",
+            "reference": "3aa2abd538f9723de27b9b6d602ed0a2116d0389",
+            "shasum": ""
+        },
+        "require": {
+            "components/jquery": ">=1.6.4",
+            "robloach/component-installer": "*"
+        },
+        "time": "2014-08-27 16:47:16",
+        "type": "component",
+        "extra": {
+            "component": {
+                "scripts": [
+                    "dist/jquery.validate.js"
+                ],
+                "files": [
+                    "js/bootstrap.min.js"
+                ],
+                "shim": {
+                    "deps": [
+                        "jquery"
+                    ]
+                }
+            }
+        },
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jörn Zaefferer",
+                "email": "joern.zaefferer@gmail.com",
+                "homepage": "http://bassistance.de",
+                "role": "Developer"
+            }
+        ],
+        "description": "Form validation made easy",
+        "homepage": "http://jqueryvalidation.org/",
+        "keywords": [
+            "Forms",
+            "validate",
+            "validation"
+        ]
     }
 ]

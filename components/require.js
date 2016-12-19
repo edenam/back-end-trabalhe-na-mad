@@ -2039,6 +2039,11 @@ var components = {
                 "jquery"
             ],
             "exports": "jQuery"
+        },
+        "jquery-validation": {
+            "deps": [
+                "jquery"
+            ]
         }
     },
     "baseUrl": "components"

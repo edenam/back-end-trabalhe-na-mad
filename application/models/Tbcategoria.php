@@ -14,5 +14,4 @@ class Tbcategoria extends MY_Model
     {
         parent::__construct();
     }
-
 }

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "dd2a22c533376bdf541345ccc744a073",
-    "content-hash": "dc712a9250695ec1435e7c33a53a1cb0",
+    "hash": "2f5f9b209c828a4daee80a046e03bc2c",
+    "content-hash": "8bb236379a444a5683b337e135b65a0e",
     "packages": [
         {
             "name": "components/jquery",
@@ -173,6 +173,103 @@
                 "restserver"
             ],
             "time": "2016-02-06 07:15:14"
+        },
+        {
+            "name": "hsalazr/jquery-validation",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hsalazr/jquery-validation.git",
+                "reference": "3aa2abd538f9723de27b9b6d602ed0a2116d0389"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hsalazr/jquery-validation/zipball/3aa2abd538f9723de27b9b6d602ed0a2116d0389",
+                "reference": "3aa2abd538f9723de27b9b6d602ed0a2116d0389",
+                "shasum": ""
+            },
+            "require": {
+                "components/jquery": ">=1.6.4",
+                "robloach/component-installer": "*"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "dist/jquery.validate.js"
+                    ],
+                    "files": [
+                        "js/bootstrap.min.js"
+                    ],
+                    "shim": {
+                        "deps": [
+                            "jquery"
+                        ]
+                    }
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jörn Zaefferer",
+                    "email": "joern.zaefferer@gmail.com",
+                    "homepage": "http://bassistance.de",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Form validation made easy",
+            "homepage": "http://jqueryvalidation.org/",
+            "keywords": [
+                "Forms",
+                "validate",
+                "validation"
+            ],
+            "time": "2014-08-27 16:47:16"
+        },
+        {
+            "name": "igorescobar/jquery-mask-plugin",
+            "version": "v1.14.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kamihouse/jQuery-Mask-Plugin.git",
+                "reference": "678a7df1f0bb275ce53f365b91af99d86850978d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kamihouse/jQuery-Mask-Plugin/zipball/678a7df1f0bb275ce53f365b91af99d86850978d",
+                "reference": "678a7df1f0bb275ce53f365b91af99d86850978d",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Igor Escobar",
+                    "email": "blog@igorescobar.com",
+                    "homepage": "https://about.me/igorescobar",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Thiago Pereira Rosa",
+                    "email": "thiagor@engineer.com",
+                    "homepage": "http://coderi.com.br",
+                    "role": "Contributor"
+                }
+            ],
+            "description": "A jQuery Plugin to make masks on form fields and html elements.",
+            "homepage": "https://github.com/igorescobar/jQuery-Mask-Plugin",
+            "keywords": [
+                "jquery",
+                "mask",
+                "plugin"
+            ],
+            "time": "2016-04-27 16:16:55"
         },
         {
             "name": "kriswallsmith/assetic",
@@ -890,7 +987,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "twbs/bootstrap": 20
+        "twbs/bootstrap": 20,
+        "hsalazr/jquery-validation": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
