@@ -51,7 +51,21 @@ class Tbproduto extends MY_Model
 
         $query = $this->db->get();
 
-        return $query->result();
+        $resultados = $query->result_array();
 
+        $output = [];
+        $cd_id = null;
+        foreach($resultados as $resultado){
+
+            if($cd_id == $resultado['cd_id']){
+                $output[$cd_id]['nm_categoria'] = $output[$cd_id]['nm_categoria'] . ", " . $resultado['nm_categoria'];
+            }else{
+                $cd_id = $resultado['cd_id'];
+                $output[$cd_id] = $resultado;
+            }
+
+        }
+
+        return $output;
     }
 }

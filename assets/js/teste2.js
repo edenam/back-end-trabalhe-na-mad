@@ -113,15 +113,37 @@ var teste2 = {
             "/index.php/api/teste2/getProdutos",
             {},
             function(data){
-                alert(data);
+                teste2.montaDataTableProdutos(data);
             },
             'json'
         );
+    },
+
+    montaDataTableProdutos: function(data){
+        
+        $tabelaProdutos = $("#dataTableProdutos");
+
+        $tabelaProdutos.find("> tbody").children().not(".hide").remove();
+
+        $.each(data, function(id, objeto){
+
+            $novaLinha = $tabelaProdutos.find(".hide").clone();
+
+            $.each(objeto, function(chave, valor){
+                $novaLinha.find("#" + chave).html(valor);
+            });
+
+            $novaLinha.removeClass("hide");
+
+            $tabelaProdutos.append($novaLinha);
+
+        });
     }
 };
 
 $(function() {
 
+    teste2.getAllProdutos();
     teste2.obterTodasCategorias();
     teste2.setupMasks();
     teste2.setupBotaoSalvarProduto();
