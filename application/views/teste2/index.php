@@ -34,6 +34,7 @@
 						<input type="text" name="peso" id="peso" class="form-control kilos" placeholder="Peso" required>
 					</div>
 				</div>
+				</form>
 
 			</div>
 
@@ -56,8 +57,6 @@
 					</div>
 				</div>
 			</div>
-
-			</form>
 		</div>
 	</div>
 </div>
