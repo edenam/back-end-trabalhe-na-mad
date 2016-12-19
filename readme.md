@@ -1,3 +1,11 @@
+### Gostaria de passar alguns pontos que podem pesar na minha avaliação: ###
+- Tive apenas 6 horas para desenvolver a atividade pois estive fazendo mudança durante o fim de semana;
+- Escolhi o Teste2. Ainda por causa do pouco tempo que tive, não pude fazê-lo da forma como gostaria. Precisaria de mais umas 8 horas para aplicar tudo que pensei. De qualquer forma, ainda que com bugs, tentei mostrar conceitualmente como aplicaria o restante do "projeto" caso o mesmo crescesse;
+- Minha ideia era fazer os três testes mas, pelo motivo exposto acima, não pude fazê-lo;
+- A URL para acesso ao teste é: http://localhost/index.php/EdenMeireles/teste2;
+- A estrutura da base está em /database;
+
+
 # Teste para Back-end #
 ---
 ### Baseado no conceito S.P.A. (Single Page Application), construa uma aplicação escolhendo uma das opções abaixo:
