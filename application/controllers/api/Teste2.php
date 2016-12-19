@@ -10,12 +10,12 @@ class Teste2 extends MY_Controller {
     {
         parent::__construct();
 
-        $this->load->model("tbcategoria", "categoria");
+        $this->load->model("tbcategoria", "categorias");
     }
 
     public function getCategories_get(){
 
-        $categorias = $this->categoria->getAll();
+        $categorias = $this->categorias->getAll();
 
         $this->response($categorias);
 

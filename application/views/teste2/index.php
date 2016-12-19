@@ -1,3 +1,5 @@
+<script type="text/javascript" src="/assets/js/teste2.js"></script>
+
 <!-- Modal de cadastro de produtos -->
 <div id="cadastroProdutoModal" class="modal fade" role="dialog">
 	<div class="modal-dialog">
@@ -33,6 +35,15 @@
 				</div>
 
 			</div>
+
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-sm-12">
+						<select name="categoria" id="select-categorias"></select>
+					</div>
+				</div>
+			</div>
+
 			<div class="modal-footer">
 				<button type="button" class="btn btn-success" data-dismiss="modal">Salvar</button>
 			</div>
