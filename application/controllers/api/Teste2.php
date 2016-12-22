@@ -1,7 +1,6 @@
 <?php
 
 use Project\Core\MY_Controller;
-use Libraries\Validations\Validations;
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
@@ -39,7 +38,7 @@ class Teste2 extends MY_Controller {
 
         try {
 
-            $this->validations->validateNomeProduto($this->post());
+            $this->validations->validateDataFabricacao($this->post());
 
 //            $campos = $this->post();
 //
@@ -49,7 +48,7 @@ class Teste2 extends MY_Controller {
 
         }catch(Exception $e){
 
-            $this->response(array("error" => $e->getMessage()), 400);
+            $this->response($this->validations->getErrorArray(), 400);
 
         }
 
