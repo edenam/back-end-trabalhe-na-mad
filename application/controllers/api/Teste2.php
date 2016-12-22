@@ -40,12 +40,12 @@ class Teste2 extends MY_Controller {
 
             $this->validations->validaNovoProduto($this->post());
             $this->produtos->saveProduto($this->post());
-            
+
             $this->response(array("success" => "ok"));
 
         }catch(Exception $e){
 
-            $this->response($this->validations->getErrorArray(), 400);
+            $this->response(array("error" => $this->validations->getErrorArray()));
 
         }
 

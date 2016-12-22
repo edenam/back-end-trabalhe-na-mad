@@ -37,7 +37,7 @@
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-$lang['form_validation_required']		= 'O {field} é obrigatório.';
+$lang['form_validation_required']		= 'O campo {field} é obrigatório.';
 $lang['form_validation_isset']			= 'O {field} field must have a value.';
 $lang['form_validation_valid_email']		= 'O {field} field must contain a valid email address.';
 $lang['form_validation_valid_emails']		= 'O {field} field must contain all valid email addresses.';
@@ -59,7 +59,7 @@ $lang['form_validation_differs']		= 'O {field} field must differ from O {param} 
 $lang['form_validation_is_unique'] 		= 'O {field} field must contain a unique value.';
 $lang['form_validation_is_natural']		= 'O {field} field must only contain digits.';
 $lang['form_validation_is_natural_no_zero']	= 'O {field} field must only contain digits and must be greater than zero.';
-$lang['form_validation_decimal']		= 'O {field} field must contain a decimal number.';
+$lang['form_validation_decimal']		= 'O campo {field} deve conter um numeral decimal.';
 $lang['form_validation_less_than']		= 'O {field} field must contain a number less than {param}.';
 $lang['form_validation_less_than_equal_to']	= 'O {field} field must contain a number less than or equal to {param}.';
 $lang['form_validation_greater_than']		= 'O {field} field must contain a number greater than {param}.';

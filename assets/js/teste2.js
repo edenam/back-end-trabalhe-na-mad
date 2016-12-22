@@ -91,7 +91,15 @@ var teste2 = {
             formSerialized,
             function(data){
                 if(data.error){
-                    alert(data.error);
+
+                    var mensagem = "";
+
+                    $.each(data.error, function(chave, valor){
+                        mensagem += "\n" + valor;
+                    });
+
+                    alert(mensagem);
+
                 }else{
                     // TODO: transformar em MODAL
                     alert("Produto cadastrado com sucesso!");

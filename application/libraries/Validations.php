@@ -16,7 +16,6 @@ class Validations {
     public function validaNovoProduto($dados){
 
         $this->validateNomeProduto($dados['nm_produto']);
-        $this->validateDataFabricacao($dados['dt_fabricacao']);
         $this->validateTamanho($dados['vl_tamanho']);
         $this->validateLargura($dados['vl_largura']);
 
@@ -25,14 +24,16 @@ class Validations {
     public function validateNomeProduto($nomeProduto){
 
         if(!is_array($nomeProduto)){
-            $nomeProduto['nm_produto'] = $nomeProduto;
+            $temp = $nomeProduto;
+            unset($nomeProduto);
+            $nomeProduto['nm_produto'] = $temp;
         }
 
         $rules = array(
             array(
                 'field' => 'nm_produto',
                 'label' => 'Nome do Produto',
-                'rules' => 'required|trim|xss_clean'
+                'rules' => 'required'
             ),
         );
 
@@ -42,13 +43,16 @@ class Validations {
     public function validateTamanho($tamanho){
 
         if(!is_array($tamanho)){
-            $dataFabricacao['vl_tamanho'] = $tamanho;
+            $temp = $tamanho;
+            unset($tamanho);
+            $tamanho['vl_tamanho'] = $temp;
         }
 
         $rules = array(
             array(
                 'field' => 'vl_tamanho',
-                'rules' => 'required|trim|decimal|numeric|xss_clean'
+                'label' => 'Tamanho',
+                'rules' => 'required|decimal'
             ),
         );
 
@@ -58,13 +62,16 @@ class Validations {
     public function validateLargura($largura){
 
         if(!is_array($largura)){
-            $dataFabricacao['vl_tamanho'] = $largura;
+            $temp = $largura;
+            unset($largura);
+            $largura['vl_largura'] = $temp;
         }
 
         $rules = array(
             array(
                 'field' => 'vl_largura',
-                'rules' => 'required|trim|decimal|numeric|xss_clean'
+                'label' => 'Largura',
+                'rules' => 'required|decimal'
             ),
         );
 
@@ -74,13 +81,16 @@ class Validations {
     public function validateDataFabricacao($dataFabricacao){
 
         if(!is_array($dataFabricacao)){
-            $dataFabricacao['dt_fabricacao'] = $dataFabricacao;
+            $temp = $dataFabricacao;
+            unset($dataFabricacao);
+            $dataFabricacao['dt_fabricacao'] = $temp;
         }
 
         $rules = array(
             array(
                 'field' => 'dt_fabricacao',
-                'rules' => 'required|trim|exact_length[10]|callback_validate_date|xss_clean'
+                'label' => 'Data de Fabricação',
+                'rules' => 'callback_validate_date'
             ),
         );
 
