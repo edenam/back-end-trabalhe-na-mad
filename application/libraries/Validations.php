@@ -13,6 +13,15 @@ class Validations {
         $this->ci->load->library('form_validation');
     }
 
+    public function validaNovoProduto($dados){
+
+        $this->validateNomeProduto($dados['nm_produto']);
+        $this->validateDataFabricacao($dados['dt_fabricacao']);
+        $this->validateTamanho($dados['vl_tamanho']);
+        $this->validateLargura($dados['vl_largura']);
+
+    }
+
     public function validateNomeProduto($nomeProduto){
 
         if(!is_array($nomeProduto)){
@@ -23,11 +32,43 @@ class Validations {
             array(
                 'field' => 'nm_produto',
                 'label' => 'Nome do Produto',
-                'rules' => 'required'
+                'rules' => 'required|trim|xss_clean'
             ),
         );
 
         $this->validate($rules, $nomeProduto);
+    }
+
+    public function validateTamanho($tamanho){
+
+        if(!is_array($tamanho)){
+            $dataFabricacao['vl_tamanho'] = $tamanho;
+        }
+
+        $rules = array(
+            array(
+                'field' => 'vl_tamanho',
+                'rules' => 'required|trim|decimal|numeric|xss_clean'
+            ),
+        );
+
+        $this->validate($rules, $tamanho);
+    }
+
+    public function validateLargura($largura){
+
+        if(!is_array($largura)){
+            $dataFabricacao['vl_tamanho'] = $largura;
+        }
+
+        $rules = array(
+            array(
+                'field' => 'vl_largura',
+                'rules' => 'required|trim|decimal|numeric|xss_clean'
+            ),
+        );
+
+        $this->validate($rules, $largura);
     }
 
     public function validateDataFabricacao($dataFabricacao){
@@ -71,13 +112,11 @@ class Validations {
 
             if (! checkdate($date_array[1], $date_array[0], $date_array[2]))
             {
-                $ci_instance->form_validation->set_message('validate_date', 'The {field} field must contain a valid date.');
                 return false;
             }
         }
         else
         {
-            $ci_instance->form_validation->set_message('validate_date', 'The {field} field must contain a valid date.');
             return false;
         }
 

@@ -38,13 +38,10 @@ class Teste2 extends MY_Controller {
 
         try {
 
-            $this->validations->validateDataFabricacao($this->post());
-
-//            $campos = $this->post();
-//
-//            $this->produtos->saveProduto($campos);
-//
-//            $this->response(array("success" => "ok"));
+            $this->validations->validaNovoProduto($this->post());
+            $this->produtos->saveProduto($this->post());
+            
+            $this->response(array("success" => "ok"));
 
         }catch(Exception $e){
 
