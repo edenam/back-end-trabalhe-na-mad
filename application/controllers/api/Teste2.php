@@ -1,10 +1,13 @@
 <?php
 
 use Project\Core\MY_Controller;
+use Libraries\Validations\Validations;
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Teste2 extends MY_Controller {
+
+    private $formValidations;
 
     function __construct()
     {
@@ -12,6 +15,8 @@ class Teste2 extends MY_Controller {
 
         $this->load->model("tbcategoria", "categorias");
         $this->load->model("tbproduto", "produtos");
+        $this->load->library("validations");
+
     }
 
     public function getCategories_get(){
@@ -34,11 +39,13 @@ class Teste2 extends MY_Controller {
 
         try {
 
-            $campos = $this->post();
+            $this->validations->validateNomeProduto($this->post());
 
-            $this->produtos->saveProduto($campos);
-
-            $this->response(array("success" => "ok"));
+//            $campos = $this->post();
+//
+//            $this->produtos->saveProduto($campos);
+//
+//            $this->response(array("success" => "ok"));
 
         }catch(Exception $e){
 
